@@ -4,7 +4,7 @@
 # Author: Jason Campisi
 # Version 0.1.0
 # Date: 6/13/23
-# About: This program solves if you have x amount of money that grows in interest each year at y rate, how much do you have after z years?
+# About: This program solves if you have x amount of money that grows in interest each year at rate y, how much do you have after z years?
 # Usage: yoi amount-of-money interest-rate [years]
 #  Where interest rate is in decimal form
 #  if you do not define years, it will assume 30
