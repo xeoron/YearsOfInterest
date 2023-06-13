@@ -1,6 +1,7 @@
 yearsOfInterest
 =====
 Sometimes we just want to do simple math fast and easy.
+
 Problem: how much money will you have after investing X amount with a rate of return being R percent after Y years?
 This program tells you.
 
