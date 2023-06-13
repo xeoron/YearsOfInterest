@@ -2,7 +2,7 @@
 # Name: yearsOfInterest.py
 # License: Released under GPL v3 or higher. Details here http://www.gnu.org/licenses/gpl.html
 # Author: Jason Campisi
-# Version 0.0.1
+# Version 0.1.0
 # Date: 6/13/23
 # About: This program solves if you have x amount of money that grows in interest each year at y rate, how much do you have after z years?
 # Usage: yoi amount-of-money interest-rate [years]
@@ -18,11 +18,8 @@ def percentage(number):     # convert digit percentage to number thus 0.05 perce
     return "{0:.0f}%".format(number * 100)   
 
 try:
-    if len(sys.argv) < 2: #aka sys.argv[1] is empty  #no value of money?
-        print ("Error: money value not provided")
-        exit(1)
-    elif len(sys.argv) < 3: #aka sys.argv[2] is empty #no interest rate?
-        print ("Error: No interest rate provided")
+    if len(sys.argv) < 3: #is sys.argv[1] && sys.argv[2] empty?
+        print ("Error: Please provide the money value and interest rate in decimal form!")
         exit(1)
     else:
         money = float(sys.argv[1])
