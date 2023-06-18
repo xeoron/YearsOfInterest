@@ -2,7 +2,7 @@
 # Name: yearsOfInterest.py
 # License: Released under GPL v3 or higher. Details here http://www.gnu.org/licenses/gpl.html
 # Author: Jason Campisi
-# Version 0.2.0
+# Version 0.2.1
 # Date: 6/18/23
 # About: This program solves if you have X amount of money that grows in interest rate Y each year, how much do you have after Y years?
 # Usage: yearsOfInterest [amount-of-money] [interest-rate] [years] [tax rate]
@@ -32,14 +32,15 @@ try:
         years = 30
     else:
         years = int(sys.argv[3])
-    
     if len(sys.argv) < 5:   #no tax rate given?
-        tax = 0
+        tax = 1
     else: # account for taxes if percentage was given
-       money = money-(money*float(sys.argv[4]))
-        
+        tax = float(sys.argv[4])
+        money = money - (money * tax)
+        #print ("Amount after taxes is this", money)
+
     for y in range (years):
-        money = money + (money*interest)
+        money = money + ((money * interest) * tax)
 
     print ( "$%s" % addFormatting(float(sys.argv[1])), "growing at",percentage(interest), "for", years, "years yields", addFormatting(money), "dollars!")
 

@@ -16,5 +16,5 @@ Usage Example
      
      yearsOfInterest 100 0.05 2  --> $100.00 growing at 5% for 2 years yields 110.25 dollars!
      yearsOfInterest 100 0.08 5  --> $100.00 growing at 8% for 5 years yields 146.93 dollars!
-     yearsOfInterest 100 0.08 5 0.35   --> $100.00 growing at 8% for 5 years yields 95.51 dollars!
+     yearsOfInterest 100 0.08 5 0.35   --> $100.00 growing at 8% for 5 years yields 74.62 dollars!
      
