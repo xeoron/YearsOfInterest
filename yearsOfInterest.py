@@ -32,16 +32,14 @@ try:
         years = 30
     else:
         years = int(sys.argv[3])
+    
     if len(sys.argv) < 5:   #no tax rate given?
         tax = 0
-    else:
-        tax = float(sys.argv[4])
-    
+    else: # account for taxes if percentage was given
+       money = money-(money*float(sys.argv[4]))
+        
     for y in range (years):
         money = money + (money*interest)
-    
-    if tax > 0:
-        money = money-(money*tax)
 
     print ( "$%s" % addFormatting(float(sys.argv[1])), "growing at",percentage(interest), "for", years, "years yields", addFormatting(money), "dollars!")
 
