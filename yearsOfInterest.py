@@ -23,6 +23,7 @@ def percentage(number):     # convert digit percentage to number thus 0.05 perce
 try:
     if len(sys.argv) < 3: #is sys.argv[1] && sys.argv[2] empty?
         print ("Error: Please provide the money value and interest rate in decimal form!")
+        print ("Usage: yearsOfInterest [amount-of-money] [interest-rate-in-decemal-form]  Optional-switches: [years] [tax rate]")
         exit(1)
     else:
         money = float(sys.argv[1])
